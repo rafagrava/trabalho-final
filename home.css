@@ -1,0 +1,500 @@
+*{
+    padding: 0;
+    margin: 0;  
+    font-family: Verdana, Geneva, Tahoma, sans-serif;  
+}
+
+h1{
+    text-transform: uppercase;
+    text-align: center;
+    position:relative;
+}
+
+header{
+    background-color: #A6A6A6;
+    color: black;
+}
+
+.headertop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #A6A6A6;
+}
+
+.headertop img{
+    width: 100px;
+}
+
+.headertop ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.headertop li a img{
+    width: 30px;
+    justify-content: space-around;
+}
+
+
+.navegacao{
+    background-color: #73655A;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    align-items: center;
+    text-transform: uppercase;
+    border: solid 3px #73655A;
+    border-radius: 10px;
+}
+.navegacao ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navegacao ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navegacao ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.popular{
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #A6A6A6;
+    text-transform: uppercase;
+}
+
+.popular h2{
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.popular p{
+    font-size: 14px;
+    color: #000;
+}
+
+
+.produtos{
+    display: grid;
+    grid-template-areas: 
+    "calcas camisas body"
+    "jeans jeans jeans";
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    max-width: 1200px;
+    margin: 30px auto;
+    grid-template-rows: auto auto;
+}
+
+.item{
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #A6A6A6;
+    display: flex;
+    flex-direction: column;
+}
+
+.item img{
+
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+}
+
+.item button{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #A6A6A6;
+    color: #000;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 15px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.calcas{
+    grid-area: calcas;
+    height: 300px;
+}
+
+.camisas{
+    grid-area: camisas;
+    height: 300px;
+}
+
+.jeans{
+    grid-area: jeans;
+    height: 300px;
+}
+
+.body{
+    grid-area: body;
+    height: 300px;
+}
+
+.feminino{
+    background-color: #73655A;
+    padding: 20px;
+}
+
+.feminino h2{
+    text-align: center;
+    color: #000;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.feminino h3{
+    text-align: center;
+    color: #000;
+    margin-bottom: 20px;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+.feminino, .produtos-femininos {
+    
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    max-width: 100%;
+    padding: 20px;
+}
+
+.feminino, .produtos-femininos div{
+    background-color: #A6A6A6;
+    padding: 15px;
+    text-align: center;
+    width:250px;
+}
+
+.feminino, .produtos-femininos img{
+    width: 100%;
+    height: auto;
+}
+
+.texto{
+    font-size: 24px;
+    background-color: #73655A;
+    padding: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    border: solid 3px #73655A;
+}
+
+footer{
+    text-align: center;
+    padding: 30px;
+    background-color: #73655A;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+@media (max-width: 767px){
+    .produtos{
+        grid-template-areas: 
+        "calcas"
+        "camisas"
+        "body"
+        "jeans";
+        grid-template-columns: 1fr;
+    }
+
+    .item{
+        height: 200px;
+    }
+
+    .item img{
+        height: 100%;
+    }
+
+    .feminino, .produtos-femininos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feminino, .produtos-femininos div{
+        width: 100%;
+    }
+    .feminino, .produtos-femininos img{
+        width: 100%;
+        height: auto;
+    }
+    .texto{
+        font-size: 20px;
+    }
+    .popular h2{
+        font-size: 24px;
+    }
+    .popular p{
+        font-size: 14px;
+    }
+    .navegacao ul li{
+        padding: 10px;
+    }
+    .navegacao ul li a{
+        font-size: 16px;
+    }
+    .headertop img{
+        width: 80px;
+    }
+    .headertop ul li a img{
+        width: 25px;
+    }
+    .headertop ul{
+        gap: 10px;
+    }
+    .headertop{
+        flex-direction: column;
+        align-items: center;
+    }
+    .headertop ul{
+        justify-content: center;
+    }
+    .headertop ul li{
+        padding: 5px;
+    }
+    .headertop ul li a img{
+        width: 20px;
+    }
+    .navegacao{
+        flex-direction: column;
+        align-items: center;
+    }
+    .navegacao ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    .navegacao ul li{
+        padding: 5px;
+    }
+    .navegacao ul li a{
+        font-size: 14px;
+    }
+    .popular{
+        padding: 20px 10px;
+    }
+    .popular h2{
+        font-size: 20px;
+    }
+    .popular p{
+        font-size: 12px;
+    }
+    .produtos{
+        max-width: 100%;
+        padding: 10px;
+    }
+    .produtos .item{
+        height: 150px;
+    }
+    .produtos .item img{
+        height: 100%;
+    }   
+    .feminino h2, .produtos-femininos h2{
+        font-size: 18px;
+    }
+    .feminino h3, .produtos-femininos h3{
+        font-size: 14px;
+    }
+    .feminino, .produtos-femininos div{
+        width: 100%;
+        padding: 10px;
+    }
+    .feminino, .produtos-femininos img{
+        width: 100%;
+        height: auto;
+    }
+    .texto{
+        font-size: 18px;
+    }
+    footer{
+        font-size: 16px;
+        padding: 20px;
+    }
+    .produtos-femininos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .produtos-femininos div{
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    .produtos-femininos img{
+        width: 100%;
+        height: auto;
+    }
+    .produtos-femininos h2{
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .produtos-femininos h3{
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .produtos{
+        grid-template-areas: 
+        "calcas camisas"
+        "body jeans";
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .item{
+        height: 250px;
+    }
+
+    .item img{
+        height: 100%;
+    }
+
+    .feminino, .produtos-femininos {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .feminino, .produtos-femininos div{
+        width: 300px;
+    }
+    .feminino, .produtos-femininos img{
+        width: 100%;
+        height: auto;
+    }
+    .texto{
+        font-size: 22px;
+    }
+    .popular h2{
+        font-size: 26px;
+    }
+    .popular p{
+        font-size: 14px;
+    }
+    .navegacao ul li{
+        padding: 15px;
+    }
+    .navegacao ul li a{
+        font-size: 18px;
+    }
+    .headertop img{
+        width: 90px;
+    }
+    .headertop ul li a img{
+        width: 28px;
+    }
+    .headertop ul{
+        gap: 15px;
+    }
+    .headertop{
+        flex-direction: row;
+        align-items: center;
+    }
+    .headertop ul{
+        justify-content: flex-end;
+    }
+    .headertop ul li{
+        padding: 8px;
+    }
+    .headertop ul li a img{
+        width: 24px;
+    }
+    .navegacao{
+        flex-direction: row;
+        justify-content: center;
+    }
+    .navegacao ul{
+        flex-direction: row;
+        justify-content: center;
+    }
+    .navegacao ul li{
+        padding: 10px;
+    }
+    .navegacao ul li a{
+        font-size: 16px;
+    }
+    .popular{
+        padding: 30px 20px;
+    }
+    .popular h2{
+        font-size: 22px;
+    }
+    .popular p{
+        font-size: 12px;
+    }
+    .produtos{
+        max-width: 100%;
+        padding: 20px;
+    }
+    .produtos .item{
+        height: 200px;
+    }
+    .produtos .item img{
+        height: 100%;
+    }
+    .feminino h2, .produtos-femininos h2{
+        font-size: 20px;
+    }
+    .feminino h3, .produtos-femininos h3{
+        font-size: 16px;
+    }
+    .feminino, .produtos-femininos div{
+        width: 300px;
+        padding: 15px;
+    }
+    .feminino, .produtos-femininos img{
+        width: 100%;
+        height: auto;
+    }
+    .texto{
+        font-size: 20px;
+    }
+    footer{
+        font-size: 18px;
+        padding: 25px;
+    }
+    .produtos-femininos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .produtos-femininos div{
+        width: 300px;
+        padding: 15px;
+        margin: 10px;
+    }
+    .produtos-femininos img{
+        width: 100%;
+        height: auto;
+    }
+    .produtos-femininos h2{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .produtos-femininos h3{
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+}
